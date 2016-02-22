@@ -5,3 +5,5 @@ go:
 
 env: 
   - GO15VENDOREXPERIMENT=1
+
+install: true
