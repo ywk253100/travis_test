@@ -2,3 +2,6 @@ language: go
 
 go: 
   - 1.5.3
+
+env: 
+  - GO15VENDOREXPERIMENT=1
