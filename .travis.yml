@@ -15,6 +15,7 @@ before_install:
   - go get github.com/go-sql-driver/mysql
   - mkdir $HOME/gopath/bin
   - go get github.com/golang/lint
+  - go install github.com/golang/lint
   - mysql < ./registry.sql --verbose -uroot
 
 install: true
