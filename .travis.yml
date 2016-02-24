@@ -3,6 +3,11 @@ language: go
 go: 
   - 1.5.3
 
+go_import_path: travis_test
+
+service:
+  - mysql
+
 env: 
   - GO15VENDOREXPERIMENT=1
 
