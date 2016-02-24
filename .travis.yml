@@ -13,9 +13,7 @@ env:
 
 before_install: 
   - go get github.com/go-sql-driver/mysql
-  - mkdir $HOME/gopath/bin
-  - go get github.com/golang/lint
-  - go install github.com/golang/lint
+  - go get -u github.com/golang/lint/golint
   - mysql < ./registry.sql --verbose -uroot
 
 install: true
@@ -24,7 +22,4 @@ script:
   - golint $(go list ./... | grep -v 'vendor')
   - go vet $(go list ./... | grep -v 'vendor')
   - go test -v $(go list ./... | grep -v 'vendor')
-  - ls $HOME/
-  - ls $HOME/gopath/
-  - ls $HOME/gopath/bin
 
