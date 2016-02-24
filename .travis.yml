@@ -17,4 +17,4 @@ before_install:
 
 install: true
 
-script: go test -v ./... && git clone git@github.com:ywk253100/Dockerfile.git && ls
+script: go test -v ./... && git clone https://github.com/ywk253100/Dockerfile.git && ls
