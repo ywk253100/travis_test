@@ -17,4 +17,6 @@ before_install:
 
 install: true
 
-script: go test -v $(go list ./... | grep -v 'vendor') && go vet $(go list ./... | grep -v 'vendor')
+script: 
+  - go test -v $(go list ./... | grep -v 'vendor')
+  - go vet $(go list ./... | grep -v 'vendor')
