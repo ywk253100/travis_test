@@ -3,14 +3,13 @@ language: go
 go: 
   - 1.5.3
 
-sudo: required
-
-services:
-  - docker
-
 env: 
   - GO15VENDOREXPERIMENT=1
 
+before_install: 
+  - go get github.com/go-sql-driver/mysql
+  - mysql < ./registry.sql --verbose -uroot
+
 install: true
 
-script: docker version
+script: go test ./...

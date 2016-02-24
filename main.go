@@ -2,9 +2,16 @@ package main
 
 import (
 	"fmt"
-	_ "github.com/astaxie/beego"
+	"log"
+	"travis_test/dao"
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	users, err := dao.GetAllUser()
+	if err != nil {
+		log.Println(err.Error())
+		return
+	}
+
+	fmt.Println(users)
 }
