@@ -22,5 +22,7 @@ script:
   - golint $(go list ./... | grep -v 'vendor')
   - go vet $(go list ./... | grep -v 'vendor')
   - go test -v $(go list ./... | grep -v 'vendor')
+  - ls $HOME/
+  - ls $HOME/gopath/
   - ls $HOME/gopath/bin
 
