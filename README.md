@@ -1,3 +1,2 @@
 # travis_test
-pr
-pr
+test  
