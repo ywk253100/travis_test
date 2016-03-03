@@ -6,20 +6,12 @@ go:
 go_import_path: travis_test
 
 service:
-  - mysql
-
-env: 
-  - GO15VENDOREXPERIMENT=1
-
-before_install: 
-  - go get github.com/go-sql-driver/mysql
-  - go get -u github.com/golang/lint/golint
-  - mysql < ./registry.sql --verbose -uroot
+  - docker
 
 install: true
 
 script: 
-  - golint $(go list ./... | grep -v 'vendor')
-  - go vet $(go list ./... | grep -v 'vendor')
-  - go test -v $(go list ./... | grep -v 'vendor')
+  - which docker
+  - ls /var/lib/
+  - docker run -it hello-world:latest
 
