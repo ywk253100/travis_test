@@ -11,4 +11,4 @@ script:
   - sudo find / -name mysqld.sock
   - sudo cat /etc/mysql/my.cnf
   - sudo ps -ef | grep mysql
-  - sudo find / mysql*
+  - sudo find / -name mysql*
