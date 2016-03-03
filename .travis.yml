@@ -4,6 +4,5 @@ services:
   - docker
 
 script:
-  - sudo service mysql start
-  - mysql --version
-  - docker -v
+  - sudo find / -name my.cnf
+  - sudo find / -name mysqld.sock
