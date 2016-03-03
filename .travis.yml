@@ -4,5 +4,6 @@ services:
   - docker
 
 script:
+  - sudo service mysql start
   - mysql --version
   - docker -v
