@@ -6,3 +6,4 @@ services:
 script:
   - sudo find / -name my.cnf
   - sudo find / -name mysqld.sock
+  - sudo cat /etc/mysql/my.cnf
